@@ -1,0 +1,22 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: emp-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    openfeign:
+      client:
+        config:
+          USERS PROVIDER:
+            connect-timeout: 5000
+            read-timeout: 5000
+          default: #全局配置改成4秒
+            connect-timeout: 4000
+            read-timeout: 4000
+
