@@ -1,0 +1,23 @@
+server:
+  port: 5001
+
+spring:
+  application:
+    name: config-server
+  #gitee????
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    config:
+      server:
+        bootstrap: true
+        git:
+          default-label: main
+          uri: https://github.com/likeqinliaaa/test.git
+          search-paths: configs
+          username: likeqinliaaa
+          password: 720606aaa
+          basedir: d:/config

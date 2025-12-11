@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.qin.client.EmpServiceFeign;
 import org.qin.model.Emp;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/emp")

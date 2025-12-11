@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: users-provider
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+      config:
+        enabled: true
+        prefixes:
+          - myconfig
+          - ${spring.application.name}
+        format: yaml
+        profile-separator: '-'
+        data-key: data
+        watch:
+          wait-time: 5
+
+
+  profiles:
+    active: dev

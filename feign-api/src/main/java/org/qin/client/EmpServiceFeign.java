@@ -17,10 +17,4 @@ public interface EmpServiceFeign {
 
     @PostMapping("/add")
     Emp addEmp(@RequestBody Emp emp);
-
-    @PostMapping("/updateByMap")
-    String updateByMap(@RequestBody Map<String, Object> map);
-
-    @PostMapping("/updateByMap2")
-    String updateByMap2(@RequestBody Map<String, Object> map);
 }

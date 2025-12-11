@@ -1,16 +1,17 @@
-package org.qin.empprovider;
+package org.qin;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-@SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("org.qin.empprovider.mapper")
-public class EmpProviderApplication {
+@EnableConfigServer
+@SpringBootApplication
+public class Configserver5001Application {
+
     public static void main(String[] args) {
-        SpringApplication.run(EmpProviderApplication.class, args);
+        SpringApplication.run(Configserver5001Application.class, args);
     }
 
 }
