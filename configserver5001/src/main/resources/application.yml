@@ -18,6 +18,4 @@ spring:
           default-label: main
           uri: https://github.com/likeqinliaaa/test.git
           search-paths: configs
-          username: likeqinliaaa
-          password: 720606aaa
           basedir: d:/config
